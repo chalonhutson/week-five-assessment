@@ -5,16 +5,43 @@
   </head>
   <body class="container">
     <button id="complimentButton">Get a compliment</button>
+    
+    <div id="fortune-container">
+      <h3 id="fortuneText">Get a fortune :)</h3>
+      <button id="fortuneBtn">Open a fortune cookie</button>
+    </div>
+   
+    <div id="lotr-container">
+      <h3 id="lotrText">Click below to get a quote.</h3>
+      <button id="lotrBtn">Get a LOTR quote</button>
+    </div>
+
+    <div id="misesPics">
+      <img src="/server/misespics/mises1.JPG" id="currentPic" height="250px">
+      <div id="catButtons">
+        <button id="leftBtn">Go Back</button>
+        <p>Look at some pics of Chalon's adorable cat, Mises.</p>
+        <button id="rightBtn">Go Forward</button>
+      </div>
+    </div>
+
+    <div id="chalonEncouragement">
+      <h2 id="chalonHead">You are awesome. However, Chalon encountered bugs at every single step of each element on this page. Would you like to give Chalon some encouragement?</h2>
+      <input type="text" id="compliment">
+      <button id="yes">Give compliment</button>
+      <button id="no">No compliment for Chalon</button>
+    </div>
 
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script>
-      document.getElementById("complimentButton").onclick = function () {
-        axios.get("http://localhost:4000/api/compliment/")
-            .then(function (response) {
-              const data = response.data;
-              alert(data);
-            });
-      };
+      // document.getElementById("complimentButton").onclick = function () {
+      //   axios.get("http://localhost:4000/api/compliment/")
+      //       .then(function (response) {
+      //         const data = response.data;
+      //         alert(data);
+      //       });
+      // };
     </script>
+    <script src="client.js"></script>
   </body>
 </html>
